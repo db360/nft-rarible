@@ -2,27 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla Boilerplate</title>
+    <title>Da.B'S NFT Minter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js" integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script
-      crossorigin="anonymous"
-      src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"
-    ></script>
-    <script
-      crossorigin="anonymous"
-      src="https://unpkg.com/moralis/dist/moralis.js"
+      src="/moralis.min.js"
     ></script>
     <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" crossorigin="anonymous">
     <!-- MDB -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
@@ -38,6 +29,7 @@
             background-color: white;
             border-radius: 20px;
             padding: 20px;
+            display: none;
         }
         .form_element {
             margin-top: 20px;
@@ -62,10 +54,10 @@
                 <input class="form-control" type="text" name="description" id="input_description" placeholder="NFT Description">
             </div>
             <div class="form_element">
-                <input class="form-control" type="file" accept="image/png, image/jpeg" name="image">
+                <input id="input_image" class="form-control" type="file" accept="image/png, image/jpeg" name="image" placeholder="Image">
             </div>
             <div class="form_element">
-                <button class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+                <button class="btn btn-primary btn-lg btn-block" id="submit_button">Submit</button>
             </div>
         </div>
       </div>
